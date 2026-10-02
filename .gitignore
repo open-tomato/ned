@@ -1,3 +1,7 @@
 node_modules/
 .reference/
 .DS_Store
+
+# >>> rafa tracking: rafa rewrites the lines up to the end marker
+.rafa/
+# <<< rafa tracking
