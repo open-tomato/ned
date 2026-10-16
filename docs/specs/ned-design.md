@@ -31,8 +31,8 @@ It runs three ways, from one core:
   approval gate (create, wait, decide). Only the webhook delivers
   anything; mail, push, reminder and prompt are schemas with no delivery.
   Slack and Telegram exist only as design documents in the older
-  monorepo: ADR 0007, the channel plugin architecture, and the OPT-206
-  notes on chat channels.
+  monorepo: ADR 0007, the channel plugin architecture, and an earlier
+  issue's notes on chat channels.
 - **The prior service carried module-to-module events too:** the executor's
   loop events reached the scheduler over SSE, and Claude Code hook events
   arrived as their own kind.
@@ -301,7 +301,7 @@ needs no permission outside the project:
 | Source | What ned takes |
 |---|---|
 | the prior service: `services/notifications`, `packages/notifications/*` | `EntityTypeDefinition` → `KindDefinition`; the webhook delivery; the executor event schemas as candidate kinds; the approval loop for `question` |
-| the older monorepo's ADR 0007 and OPT-206 notes | the retryable and permanent error split; the Telegram and Slack chat designs |
+| the older monorepo's ADR 0007 and an earlier issue's notes | the retryable and permanent error split; the Telegram and Slack chat designs |
 | the Claude Telegram channel plugin | the Telegram provider's calls (Apache-2.0: keep its notice on copied code) |
 | rafa's `src/adapters/output/events.ts`, `src/config-schema-hub.ts` | the one-line prefix format; the secret-by-name pattern |
 | `@open-tomato/define-config` | the loader, merge and validation, as a dependency |
